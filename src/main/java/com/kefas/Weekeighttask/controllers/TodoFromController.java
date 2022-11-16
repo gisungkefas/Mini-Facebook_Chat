@@ -16,7 +16,7 @@ public class TodoFromController {
 
     @GetMapping("/create-todo")
     public String showCreateForm(TodoItems todoItem){
-        return "add-todo-item";
+        return "addItems";
     }
 
     @GetMapping("/edit/{id}")

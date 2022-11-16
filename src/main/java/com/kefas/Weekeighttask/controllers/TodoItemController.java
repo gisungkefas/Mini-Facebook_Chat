@@ -38,7 +38,7 @@ public class TodoItemController {
     @PostMapping("/todo")
     public String createTodoItem(@Valid TodoItems todoItem, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            return "add-todo-item";
+            return "addItems";
         }
 
         todoItem.setCreatedDate(Instant.now());
@@ -51,7 +51,7 @@ public class TodoItemController {
     public String updateTodoItem(@PathVariable("id") long id, @Valid TodoItems todoItem, BindingResult result, Model model) {
         if (result.hasErrors()) {
             todoItem.setId(id);
-            return "update-todo-item";
+            return "updateItems";
         }
 
         todoItem.setUpdatedDate(Instant.now());

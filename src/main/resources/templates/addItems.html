@@ -15,7 +15,7 @@
     <form action="#" th:action="@{/todo}" th:object="${todoItem}" method="POST">
       <div class="form-group">
         <label for="description">Description</label>
-        <input class="form-control" type="text" th:field="description" id="description"
+        <input class="form-control" type="text" th:field="*{description}" id="description"
                placeholder="Description">
         <span th:if="${#fields.hasErrors('description')}" th:errors="description"></span>
       </div>
